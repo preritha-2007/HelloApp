@@ -1,4 +1,4 @@
-// UC4 - Display Hello with Multiple Names
+// UC5 - Display Hello using Enhanced For Loop
 
 public class HelloApp {
 
@@ -8,10 +8,13 @@ public class HelloApp {
 
             System.out.print("Hello ");
 
-            for (int i = 0; i < args.length; i++) {
-                System.out.print(args[i]);
+            int count = 0;
 
-                if (i < args.length - 1) {
+            for (String name : args) {
+                System.out.print(name);
+
+                count++;
+                if (count < args.length) {
                     System.out.print(", ");
                 }
             }
