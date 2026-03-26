@@ -1,4 +1,4 @@
-// UC6 - Using substring to remove trailing comma
+// UC7 - Using String.join()
 
 public class HelloApp {
 
@@ -6,14 +6,7 @@ public class HelloApp {
 
         if (args.length > 0) {
 
-            String names = "";
-
-            for (String name : args) {
-                names = names + name + ", ";
-            }
-
-            // Remove last ", "
-            names = names.substring(0, names.length() - 2);
+            String names = String.join(", ", args);
 
             System.out.println("Hello " + names);
 
